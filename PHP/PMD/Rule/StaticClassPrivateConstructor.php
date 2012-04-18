@@ -6,8 +6,8 @@ class PHP_PMD_Rule_StaticClassPrivateConstructor
   extends PHP_PMD_AbstractRule
   implements PHP_PMD_Rule_IClassAware {
   /**
-   * This method checks that all private class methods are at least accessed
-   * by one method.
+   * This method checks that if the class is composed of all static methods,
+   *   the class has a private __construct() method defined.
    *
    * @param PHP_PMD_AbstractNode $class The context source code node.
    * @return void
