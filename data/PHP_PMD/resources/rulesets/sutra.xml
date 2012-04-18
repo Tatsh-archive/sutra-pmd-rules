@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ruleset name="Sutra rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <rule name="StaticClassPrivateConstructorRule"
+    message="Static class {0} should have a private, empty __construct() method defined."
+    class="PHP_PMD_Rule_StaticClassPrivateConstructor">
+    <priority>1</priority>
+  </rule>
+
+  <rule name="StaticMethodConstants"
+    message="Class is missing the constant for static method {0} or the constant value  is not '{1}'."
+    class="PHP_PMD_Rule_StaticMethodConstants">
+    <priority>1</priority>
+  </rule>
+</ruleset>
