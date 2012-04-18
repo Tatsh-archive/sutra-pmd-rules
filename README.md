@@ -1,8 +1,9 @@
 ## How to use
 
-1. Copy data/PHP_PMD/resources/rulesets/sutra.xml to somewhere, or copy the contents to an existing ruleset.
-2. Place the PHP directory in path that is in your PHP include_path.
-3. Use like so:
+1. ```git clone git://github.com/tatsh/sutra-pmd-rules.git```
+2. Copy ```data/PHP_PMD/resources/rulesets/sutra.xml``` to somewhere, or copy the contents to an existing ruleset.
+3. Place the PHP directory in path that is in your PHP include_path.
+4. Use like so:
 
 ```bash
 phpmd className.php text /path/to/sutra.xml
