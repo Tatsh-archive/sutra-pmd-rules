@@ -2,7 +2,7 @@
 
 ### PEAR and git
 
-1. Install PHPMD
+* Install PHPMD
 
 ```bash
 pear channel-discover pear.phpmd.org
@@ -10,32 +10,32 @@ pear channel-discover pear.pdepend.org
 pear install --alldeps phpmd/PHP_PMD
 ```
 
-2. Clone to somewhere safe (not as root):
+* Clone to somewhere safe (not as root):
 
 ```bash
 git clone git://github.com/tatsh/sutra-pmd-rules.git
 ```
 
-3. Place the ```PHP``` directory in path that is in your PHP ```include_path```.
+* Place the ```PHP``` directory in path that is in your PHP ```include_path```.
 
-4. Copy ```data/PHP_PMD/resources/rulesets/sutra.xml``` to somewhere, or copy the contents to an existing ruleset.
+* Copy ```data/PHP_PMD/resources/rulesets/sutra.xml``` to somewhere, or copy the contents to an existing ruleset.
 
 ### Gentoo
 
-1. Install my overlay:
+* Install my overlay:
 
 ```bash
 layman -o "http://tatsh.github.com/tatsh-overlay/layman.xml" -a tatsh-overlay
 ```
 
-2. Unmask (if necessary):
+* Unmask (if necessary):
 
 ```bash
 echo "dev-php/phpmd ~amd64" >> /etc/portage/package.keywords
 echo "dev-php/sutra-phpmd-ruleset ~amd64" >> /etc/portage/package.keywords
 ```
 
-3. Install the ruleset:
+* Install the ruleset:
 
 ```bash
 emerge sutra-phpmd-ruleset
@@ -52,7 +52,7 @@ phpmd className.php text /path/to/sutra.xml
 
 ### Gentoo
 
-On Gentoo, you can reference the ruleset in your ruleset XML file so it will be similar to this:
+You can reference the ruleset in your ruleset XML file so it will be similar to this:
 
 ```xml
 <?xml version="1.0"?>
