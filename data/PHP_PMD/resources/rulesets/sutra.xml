@@ -11,7 +11,7 @@
   </rule>
 
   <rule name="StaticMethodConstants"
-    message="Class is missing the constant for static method {0} or the constant value  is not '{1}'."
+    message="Class is missing the constant for static method {0} or the constant value is not '{1}'."
     class="PHP_PMD_Rule_StaticMethodConstants">
     <priority>1</priority>
   </rule>
