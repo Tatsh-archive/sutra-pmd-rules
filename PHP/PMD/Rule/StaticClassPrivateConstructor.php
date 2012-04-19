@@ -43,7 +43,7 @@ class PHP_PMD_Rule_StaticClassPrivateConstructor
     }
 
     if (($has_construct && !$construct->isPrivate()) || !$has_construct) {
-      $this->addViolation($method, array($class->getImage()));
+      $this->addViolation($class, array($class->getImage()));
     }
   }
 
