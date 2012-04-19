@@ -42,7 +42,7 @@ class PHP_PMD_Rule_StaticMethodConstants
     $class_name = $class->getImage();
 
     foreach ($methods as $method) {
-      if ($method->isStatic()) {
+      if ($method->isStatic() && $method->isPublic()) {
         $name = $method->getImage();
         $want = $class_name.'::'.$name;
 
