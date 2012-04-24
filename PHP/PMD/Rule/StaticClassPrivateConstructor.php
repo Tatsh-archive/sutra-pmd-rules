@@ -15,8 +15,7 @@ require_once 'PHP/PMD/Rule/IClassAware.php';
  *
  * @version 1.0
  */
-class PHP_PMD_Rule_StaticClassPrivateConstructor
-  extends PHP_PMD_AbstractRule
+class PHP_PMD_Rule_StaticClassPrivateConstructor extends PHP_PMD_AbstractRule
   implements PHP_PMD_Rule_IClassAware {
   /**
    * This method checks that if the class is composed of all static methods,
@@ -59,7 +58,10 @@ class PHP_PMD_Rule_StaticClassPrivateConstructor
 
     foreach ($class->getMethods() as $method) {
       if (strcasecmp($method->getImage(), '__construct') === 0) {
-        continue;
+        if (!$method->isPrivate()) {
+          $ret = FALSE;
+          break;
+        }
       }
 
       if (!$method->isStatic()) {

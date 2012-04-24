@@ -26,8 +26,7 @@ require_once 'PHP/PMD/Rule/IClassAware.php';
  *
  * @version 1.0
  */
-class PHP_PMD_Rule_StaticMethodConstants
-  extends PHP_PMD_AbstractRule
+class PHP_PMD_Rule_StaticMethodConstants extends PHP_PMD_AbstractRule
   implements PHP_PMD_Rule_IClassAware {
   /**
    * This method checks that all public static methods have a constant defined
@@ -40,6 +39,8 @@ class PHP_PMD_Rule_StaticMethodConstants
     $methods = $class->getMethods();
     $constants = $class->getConstants();
     $class_name = $class->getImage();
+
+    // TODO Check if method is internal; if so, it does not need a constant
 
     foreach ($methods as $method) {
       if ($method->isStatic() && $method->isPublic()) {
